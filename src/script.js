@@ -21,7 +21,7 @@ import { Canvas } from 'glsl-canvas-js';
 // Canvas
 const canvas = document.querySelector('canvas.webgl')
 
-const backgroundMusic = new Audio('/sounds/music.mp3')
+const backgroundMusic = new Audio('./sounds/music.mp3')
 backgroundMusic.currentTime = 0
 backgroundMusic.loop = true
 
@@ -30,7 +30,7 @@ backgroundMusic.loop = true
 //  });
 
 
-const hitSound = new Audio('/sounds/hit.mp3')
+const hitSound = new Audio('./sounds/hit.mp3')
 // hitSound.volume = Math.random()
 
 function randomInteger(min, max) {
@@ -161,7 +161,7 @@ const mobile = window.screen.width > 768 ? false : true
 const stats = Stats()
 document.body.appendChild(stats.dom)
 
-const snow = textureLoader.load('/textures/snow.png')
+const snow = textureLoader.load('./textures/snow.png')
 
 const waterMaterial = new THREE.ShaderMaterial({
     vertexShader: waterVertexShader,
@@ -528,7 +528,7 @@ const snowParametrs = {
   let geometry = null
   let pointsMaterial = null
   let points = null
-  console.log(points);
+
   const generateSnow = () => {
   
     if(points !== null)
